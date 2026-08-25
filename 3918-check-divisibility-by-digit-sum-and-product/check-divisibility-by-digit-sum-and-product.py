@@ -5,11 +5,9 @@ class Solution:
         def spDig(n):
             nonlocal s,p
             while n != 0:
-                r = n % 10
-                s += r
-                p *= r
+                s += n % 10
+                p *= n % 10
                 n //= 10
         spDig(n)
-        print(s,p)
         k = s + p
         return True if n % k == 0 else False
